@@ -38,7 +38,7 @@ public class OpenApiConfig {
                         .contact(new Contact()
                                 .name("DMTools Team")
                                 .email("uladzimir.klyshevich@gmail.com")
-                                .url("https://github.com/IstiN/dmtools"))
+                                .url("https://github.com/fedorchuksergeiai/dmtools"))
                         .license(new License()
                                 .name("MIT License")
                                 .url("https://opensource.org/licenses/MIT")))

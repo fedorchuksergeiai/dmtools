@@ -164,5 +164,5 @@ All API endpoints return standard HTTP status codes with descriptive error messa
 
 For detailed API usage, complete parameter schemas, and interactive testing:
 - **Swagger UI**: `http://localhost:8080/swagger-ui.html` - Complete API documentation
-- **GitHub Issues**: [DMTools Issues](https://github.com/IstiN/dmtools/issues)
+- **GitHub Issues**: [DMTools Issues](https://github.com/fedorchuksergeiai/dmtools/issues)
 - **Main Documentation**: [README.md](../README.md) - Setup and configuration 

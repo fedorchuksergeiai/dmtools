@@ -56,8 +56,8 @@ If Windows blocks execution:
 
 ## 🆘 Need Help?
 
-- **Documentation:** https://github.com/IstiN/dmtools
-- **Issues:** https://github.com/IstiN/dmtools/issues
+- **Documentation:** https://github.com/fedorchuksergeiai/dmtools
+- **Issues:** https://github.com/fedorchuksergeiai/dmtools/issues
 - **API Docs:** http://localhost:8080/swagger-ui.html (after startup)
 
 ## 🔒 Default Credentials

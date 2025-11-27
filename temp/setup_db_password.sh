@@ -55,7 +55,7 @@ else
     echo "❌ GitHub CLI not installed or not in PATH"
     echo "📝 Manual step required: Add password to GitHub secrets"
     echo "   Password: $DB_PASSWORD"
-    echo "   Go to: https://github.com/IstiN/dmtools/settings/secrets/actions"
+    echo "   Go to: https://github.com/fedorchuksergeiai/dmtools/settings/secrets/actions"
     echo "   Add new secret with name: DB_PASSWORD"
     echo "   Or install GitHub CLI: brew install gh"
 fi

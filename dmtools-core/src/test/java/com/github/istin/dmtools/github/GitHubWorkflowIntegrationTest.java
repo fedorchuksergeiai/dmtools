@@ -17,7 +17,7 @@ public class GitHubWorkflowIntegrationTest {
     @Test
     @Disabled("Enable for manual testing with real GitHub credentials")
     public void testWorkflowSummaryExtraction() throws Exception {
-        // Test with the actual workflow run: https://github.com/IstiN/dmtools/actions/runs/16858480819
+        // Test with the actual workflow run: https://github.com/fedorchuksergeiai/dmtools/actions/runs/16858480819
         String owner = "IstiN";
         String repo = "dmtools";
         Long runId = 16858480819L;
@@ -38,7 +38,7 @@ public class GitHubWorkflowIntegrationTest {
         
         // Test the workflow summary extraction
         String summary = github.callHookAndWaitResponse(
-            "https://github.com/IstiN/dmtools/actions/workflows/aider-gemini-assist.yml",
+            "https://github.com/fedorchuksergeiai/dmtools/actions/workflows/aider-gemini-assist.yml",
             "Test request"
         );
         
@@ -54,7 +54,7 @@ public class GitHubWorkflowIntegrationTest {
     @Test
     @Disabled("Enable for manual testing with real GitHub credentials")
     public void testSpecificWorkflowRunSummary() throws Exception {
-        // Test with specific workflow run ID: https://github.com/IstiN/dmtools/actions/runs/16858480819
+        // Test with specific workflow run ID: https://github.com/fedorchuksergeiai/dmtools/actions/runs/16858480819
         String owner = "IstiN";
         String repo = "dmtools";
         Long runId = 17138378930L;

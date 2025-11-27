@@ -5,7 +5,7 @@ Get DMTools CLI installed and ready to use in minutes.
 ## Quick Install (Recommended)
 
 ```bash
-curl https://github.com/IstiN/dmtools/releases/latest/download/install.sh -fsS | bash
+curl https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh -fsS | bash
 ```
 
 This will:
@@ -75,7 +75,7 @@ If you prefer manual installation or the quick install doesn't work:
 
 ### Step 1: Download
 
-Download the latest files from [GitHub Releases](https://github.com/IstiN/dmtools/releases/latest):
+Download the latest files from [GitHub Releases](https://github.com/fedorchuksergeiai/dmtools/releases/latest):
 - `dmtools.jar` - Main application
 - `dmtools.sh` - Shell wrapper script
 
@@ -136,7 +136,7 @@ source ~/.zshrc
 - name: Install DMTools CLI
   if: steps.cache-dmtools.outputs.cache-hit != 'true'
   run: |
-    curl https://github.com/IstiN/dmtools/releases/latest/download/install.sh -fsS | bash
+    curl https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh -fsS | bash
 
 - name: Add DMTools to PATH
   run: echo "$HOME/.dmtools/bin" >> $GITHUB_PATH
@@ -161,7 +161,7 @@ dmtools-job:
     - apt-get update -qq && apt-get install -y curl
     - |
       if [ ! -f "$HOME/.dmtools/dmtools.jar" ]; then
-        curl https://github.com/IstiN/dmtools/releases/latest/download/install.sh -fsS | bash
+        curl https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh -fsS | bash
       fi
     - export PATH="$HOME/.dmtools/bin:$PATH"
   
@@ -177,7 +177,7 @@ For local development and contribution:
 
 ```bash
 # Clone repository
-git clone https://github.com/IstiN/dmtools.git
+git clone https://github.com/fedorchuksergeiai/dmtools.git
 cd dmtools
 
 # Build from source
@@ -220,12 +220,12 @@ Install Java 23 or later. See [Prerequisites](#java-23-or-later-required) above.
 
 Reinstall DMTools:
 ```bash
-curl https://github.com/IstiN/dmtools/releases/latest/download/install.sh -fsS | bash
+curl https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh -fsS | bash
 ```
 
 Or manually download the JAR:
 ```bash
-curl -L https://github.com/IstiN/dmtools/releases/latest/download/dmtools.jar \
+curl -L https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/dmtools.jar \
   -o ~/.dmtools/dmtools.jar
 ```
 
@@ -247,7 +247,7 @@ Ensure Java is set up **before** installing DMTools:
     java-version: '23'
 
 - name: Install DMTools CLI
-  run: curl https://github.com/IstiN/dmtools/releases/latest/download/install.sh -fsS | bash
+  run: curl https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh -fsS | bash
 ```
 
 ---

@@ -187,23 +187,23 @@ jobs:
           
           **One-line installation (works on macOS, Linux, and Windows):**
           \`\`\`bash
-          curl -fsSL https://github.com/IstiN/dmtools/releases/download/v${VERSION}/install | bash
+          curl -fsSL https://github.com/fedorchuksergeiai/dmtools/releases/download/v${VERSION}/install | bash
           \`\`\`
           
           **Alternative methods (backward compatible):**
           
           **macOS/Linux:**
           \`\`\`bash
-          curl -fsSL https://github.com/IstiN/dmtools/releases/download/v${VERSION}/install.sh | bash
+          curl -fsSL https://github.com/fedorchuksergeiai/dmtools/releases/download/v${VERSION}/install.sh | bash
           \`\`\`
           
           **Windows (PowerShell):**
           \`\`\`powershell
           # PowerShell 5.1+ (irm is an alias)
-          irm https://github.com/IstiN/dmtools/releases/download/v${VERSION}/install.ps1 | iex
+          irm https://github.com/fedorchuksergeiai/dmtools/releases/download/v${VERSION}/install.ps1 | iex
           
           # Or use full command (works in all PowerShell versions)
-          Invoke-RestMethod -Uri 'https://github.com/IstiN/dmtools/releases/download/v${VERSION}/install.ps1' | Invoke-Expression
+          Invoke-RestMethod -Uri 'https://github.com/fedorchuksergeiai/dmtools/releases/download/v${VERSION}/install.ps1' | Invoke-Expression
           \`\`\`
           
           **Manual download:**
@@ -370,9 +370,9 @@ jobs:
           
           ### Getting Help
           
-          - **Issues:** [GitHub Issues](https://github.com/IstiN/dmtools/issues)
-          - **Documentation:** [Main Repository](https://github.com/IstiN/dmtools)
-          - **Flutter SPA:** [Flutter Repository](https://github.com/IstiN/dmtools-flutter)
+          - **Issues:** [GitHub Issues](https://github.com/fedorchuksergeiai/dmtools/issues)
+          - **Documentation:** [Main Repository](https://github.com/fedorchuksergeiai/dmtools)
+          - **Flutter SPA:** [Flutter Repository](https://github.com/fedorchuksergeiai/dmtools-flutter)
           
           ---
           

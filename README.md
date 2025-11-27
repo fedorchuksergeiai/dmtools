@@ -41,7 +41,7 @@ Delivery Management Tools
 
 ```bash
 # One-line installation
-curl https://github.com/IstiN/dmtools/releases/latest/download/install.sh -fsS | bash
+curl https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh -fsS | bash
 
 # Verify installation
 dmtools --version
@@ -80,13 +80,13 @@ See **[First Steps Guide](docs/getting-started/first-steps.md)** for more exampl
 ---
 
 ## Simple Run (Legacy)
-1. Download the release from: [DMTools Releases](https://github.com/IstiN/dmtools/releases)
+1. Download the release from: [DMTools Releases](https://github.com/fedorchuksergeiai/dmtools/releases)
 2. Set environment variables.
 3. Run the command:
    ```bash
    java -cp dmtools.jar com.github.istin.dmtools.job.UrlEncodedJobTrigger "$JOB_PARAMS"
    ```
-   API of base64 encoded `JOB_PARAMS`: [API Description](https://github.com/IstiN/dmtools/blob/main/api_description.md)
+   API of base64 encoded `JOB_PARAMS`: [API Description](https://github.com/fedorchuksergeiai/dmtools/blob/main/api_description.md)
 
 ---
 

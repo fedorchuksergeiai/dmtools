@@ -47,7 +47,7 @@ jobs:
           mkdir -p $HOME/.dmtools/bin
           
           echo "Installing DMTools $LATEST_VERSION"
-          curl -L "https://github.com/IstiN/dmtools/releases/download/$LATEST_VERSION/dmtools-$LATEST_VERSION-all.jar" -o "$HOME/.dmtools/dmtools.jar"
+          curl -L "https://github.com/fedorchuksergeiai/dmtools/releases/download/$LATEST_VERSION/dmtools-$LATEST_VERSION-all.jar" -o "$HOME/.dmtools/dmtools.jar"
           
           # Create wrapper script
           cat > "$HOME/.dmtools/bin/dmtools" << 'EOF'

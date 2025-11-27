@@ -219,7 +219,7 @@ publishing {
             pom {
                 name = 'DM Tools Core'
                 description = 'DM Tools Core Library'
-                url = 'https://github.com/IstiN/dmtools'
+                url = 'https://github.com/fedorchuksergeiai/dmtools'
                 licenses {
                     license {
                         name = 'MIT License'
@@ -236,7 +236,7 @@ publishing {
                 scm {
                     connection = 'scm:git:git://github.com/IstiN/dmtools.git'
                     developerConnection = 'scm:git:ssh://github.com:IstiN/dmtools.git'
-                    url = 'https://github.com/IstiN/dmtools'
+                    url = 'https://github.com/fedorchuksergeiai/dmtools'
                 }
             }
         }

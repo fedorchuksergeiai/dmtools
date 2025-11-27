@@ -180,8 +180,8 @@ dmtools run my-config.json
 - **Integrate with CI/CD** → [Installation](getting-started/installation.md)
 
 ### 🔗 External Links
-- [GitHub Repository](https://github.com/istin/dmtools)
-- [Issue Tracker](https://github.com/istin/dmtools/issues)
+- [GitHub Repository](https://github.com/fedorchuksergeiai/dmtools)
+- [Issue Tracker](https://github.com/fedorchuksergeiai/dmtools/issues)
 
 ---
 

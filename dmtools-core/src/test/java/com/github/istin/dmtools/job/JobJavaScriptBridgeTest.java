@@ -293,7 +293,7 @@ class JobJavaScriptBridgeTest {
     @Test
     void testGitHubUrlLoading() throws Exception {
         // Given
-        String githubUrl = "https://github.com/IstiN/dmtools/blob/main/dmtools-core/src/main/resources/js/test.js";
+        String githubUrl = "https://github.com/fedorchuksergeiai/dmtools/blob/main/dmtools-core/src/main/resources/js/test.js";
         String mockJSContent = """
             function action(params) {
                 return "Loaded from GitHub: " + params.message;

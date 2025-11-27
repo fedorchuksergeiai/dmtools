@@ -23,7 +23,7 @@ jobs:
       - name: Install DMTools CLI
         shell: bash
         run: |
-          curl -fsSL https://github.com/IstiN/dmtools/releases/latest/download/install | bash
+          curl -fsSL https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install | bash
           # The install script adds to Windows PATH, but we'll use full path in PowerShell steps
 
       - name: Verify Installation

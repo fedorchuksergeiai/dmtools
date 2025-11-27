@@ -189,7 +189,7 @@
         "Detailed homework summary including creating a project and advanced tasks"
         
         Example of GOOD note (preserves all details):
-        "HW summary:\n- create cloud jira project (or use existing if allowed)\n- configure it: issue types, fields, workflows\n- create ai teammate email, invite to project\n- create confluence pages with DoR for BA, SA Dev, QA\n- clone repo: https://github.com/IstiN/dmtools-ai-teammate\n- configure workflow with your keys\n- create jira automation to run workflow\n- get first story described with AI\n- **advanced:** remove dmtools, write custom logic for ticket/DoR/attachments, wrap via CLI, prepare cursor scripts\n- **advanced:** use other dmtools CLI tools for documentation workflows"
+        "HW summary:\n- create cloud jira project (or use existing if allowed)\n- configure it: issue types, fields, workflows\n- create ai teammate email, invite to project\n- create confluence pages with DoR for BA, SA Dev, QA\n- clone repo: https://github.com/fedorchuksergeiai/dmtools-ai-teammate\n- configure workflow with your keys\n- create jira automation to run workflow\n- get first story described with AI\n- **advanced:** remove dmtools, write custom logic for ticket/DoR/attachments, wrap via CLI, prepare cursor scripts\n- **advanced:** use other dmtools CLI tools for documentation workflows"
 
         LINK EXTRACTION - CRITICAL:
         - Extract EVERY URL you see in messages

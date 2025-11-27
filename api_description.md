@@ -104,5 +104,5 @@ Use the DMTools web interface for interactive job configuration and execution.
 
 For detailed parameter schemas, validation rules, and interactive testing:
 - **Swagger UI**: `http://localhost:8080/swagger-ui.html`
-- **GitHub Issues**: [DMTools Issues](https://github.com/IstiN/dmtools/issues)
+- **GitHub Issues**: [DMTools Issues](https://github.com/fedorchuksergeiai/dmtools/issues)
 - **Main Documentation**: [README.md](README.md) - Setup and configuration

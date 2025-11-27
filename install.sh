@@ -1,6 +1,6 @@
 #!/bin/bash
 # DMTools CLI Installation Script
-# Usage: curl https://github.com/IstiN/dmtools/releases/latest/download/install.sh -fsS | bash
+# Usage: curl https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh -fsS | bash
 # Requirements: Java 23 (will attempt automatic installation on macOS/Linux)
 
 set -e
@@ -193,7 +193,7 @@ steps:
       java-version: '23'
   - name: Install DMTools CLI
     run: |
-      curl https://github.com/IstiN/dmtools/releases/latest/download/install.sh -fsS | bash"
+      curl https://github.com/fedorchuksergeiai/dmtools/releases/latest/download/install.sh -fsS | bash"
         elif [[ "$OSTYPE" == "darwin"* ]]; then
             warn "Java not found. Attempting to install via Homebrew..."
             if command -v brew >/dev/null 2>&1; then
