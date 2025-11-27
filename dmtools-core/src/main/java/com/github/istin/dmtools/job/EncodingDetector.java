@@ -27,24 +27,42 @@ public class EncodingDetector {
             throw new IllegalArgumentException("Encoded parameter cannot be null or empty");
         }
         
+        String trimmedEncoded = encoded.trim();
+        
         try {
             // Try base64 decoding first
-            String decoded = decodeBase64(encoded);
+            String decoded = decodeBase64(trimmedEncoded);
+            if (decoded == null || decoded.trim().isEmpty()) {
+                logger.warn("Base64 decoding succeeded but produced empty result, attempting URL decoding");
+                throw new IllegalArgumentException("Base64 decoding produced empty result");
+            }
+            // Unescape quotes if present (handles cases where JSON was escaped before encoding)
+            String unescaped = unescapeJsonQuotes(decoded);
             logger.info("Successfully decoded parameter using base64 encoding");
-            return decoded;
+            return unescaped.trim();
         } catch (Exception e) {
             logger.debug("Base64 decoding failed, attempting URL decoding: {}", e.getMessage());
             
             try {
                 // Fallback to URL decoding
-                String decoded = decodeUrl(encoded);
+                String decoded = decodeUrl(trimmedEncoded);
+                if (decoded == null || decoded.trim().isEmpty()) {
+                    logger.error("URL decoding succeeded but produced empty result");
+                    throw new IllegalArgumentException(
+                        "URL decoding produced empty result. " +
+                        "The encoded parameter may be empty or contain only whitespace."
+                    );
+                }
+                // Unescape quotes if present (handles cases where JSON was escaped before encoding)
+                String unescaped = unescapeJsonQuotes(decoded);
                 logger.info("Successfully decoded parameter using URL encoding");
-                return decoded;
+                return unescaped.trim();
             } catch (Exception urlException) {
                 logger.error("Both base64 and URL decoding failed for input parameter");
                 throw new IllegalArgumentException(
                     "Unable to decode parameter - neither base64 nor URL encoding format detected. " +
-                    "Base64 error: " + e.getMessage() + ". URL error: " + urlException.getMessage()
+                    "Base64 error: " + e.getMessage() + ". URL error: " + urlException.getMessage() + ". " +
+                    "Input preview: " + (trimmedEncoded.length() > 50 ? trimmedEncoded.substring(0, 50) + "..." : trimmedEncoded)
                 );
             }
         }
@@ -79,5 +97,26 @@ public class EncodingDetector {
         } catch (Exception e) {
             throw new IllegalArgumentException("Invalid URL encoding: " + e.getMessage(), e);
         }
+    }
+    
+    /**
+     * Unescapes JSON quotes in a string.
+     * Converts escaped quotes (\") to actual quotes (").
+     * This handles cases where JSON was escaped before being URL encoded.
+     * 
+     * @param input The string that may contain escaped quotes
+     * @return The string with unescaped quotes
+     */
+    private String unescapeJsonQuotes(String input) {
+        if (input == null) {
+            return null;
+        }
+        // Replace \" with " to fix escaped quotes
+        String unescaped = input.replace("\\\"", "\"");
+        // Also handle other common escape sequences that might appear
+        unescaped = unescaped.replace("\\n", "\n");
+        unescaped = unescaped.replace("\\r", "\r");
+        unescaped = unescaped.replace("\\t", "\t");
+        return unescaped;
     }
 }

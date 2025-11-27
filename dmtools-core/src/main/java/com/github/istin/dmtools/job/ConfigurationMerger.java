@@ -38,7 +38,31 @@ public class ConfigurationMerger {
                 return baseConfig.toString();
             }
             
-            JSONObject overrideConfig = new JSONObject(encodedJson);
+            // Validate that the decoded string is valid JSON before attempting to parse
+            String trimmedEncodedJson = encodedJson.trim();
+            if (trimmedEncodedJson.isEmpty()) {
+                logger.warn("Decoded parameter is empty after trimming, using file configuration only");
+                return baseConfig.toString();
+            }
+            
+            // Try to parse as JSON to validate it's valid JSON format
+            try {
+                new JSONObject(trimmedEncodedJson);
+            } catch (JSONException validationException) {
+                logger.error("Decoded parameter is not valid JSON. Decoded value (first 100 chars): '{}'. Error: {}", 
+                    trimmedEncodedJson.length() > 100 ? trimmedEncodedJson.substring(0, 100) + "..." : trimmedEncodedJson,
+                    validationException.getMessage());
+                throw new IllegalArgumentException(
+                    "Decoded parameter is not valid JSON. " +
+                    "Expected a JSON object but got invalid JSON. " +
+                    "Error: " + validationException.getMessage() + ". " +
+                    "Decoded value preview: " + 
+                    (trimmedEncodedJson.length() > 200 ? trimmedEncodedJson.substring(0, 200) + "..." : trimmedEncodedJson),
+                    validationException
+                );
+            }
+            
+            JSONObject overrideConfig = new JSONObject(trimmedEncodedJson);
             JSONObject mergedConfig = deepMerge(baseConfig, overrideConfig);
             
             logger.info("Successfully merged file configuration with encoded parameter using deep merge strategy");

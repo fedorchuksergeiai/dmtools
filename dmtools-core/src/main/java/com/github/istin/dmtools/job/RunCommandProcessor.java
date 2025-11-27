@@ -52,6 +52,11 @@ public class RunCommandProcessor {
         String filePath = args[1];
         String encodedConfig = args.length > 2 ? args[2] : null;
         
+        // Normalize empty strings to null for consistent handling
+        if (encodedConfig != null && encodedConfig.trim().isEmpty()) {
+            encodedConfig = null;
+        }
+        
         logger.info("Processing run command: file={}, hasEncodedConfig={}", filePath, encodedConfig != null);
         
         try {
@@ -61,12 +66,14 @@ public class RunCommandProcessor {
             // Process encoded configuration if provided
             String finalConfigJson;
             if (encodedConfig != null && !encodedConfig.trim().isEmpty()) {
+                logger.debug("Attempting to decode encoded configuration parameter (length: {})", encodedConfig.length());
                 String decodedJson = encodingDetector.autoDetectAndDecode(encodedConfig);
+                logger.debug("Decoded configuration length: {}", decodedJson != null ? decodedJson.length() : 0);
                 finalConfigJson = configurationMerger.mergeConfigurations(fileJson, decodedJson);
                 logger.info("Configuration merged successfully from file and encoded parameter");
             } else {
                 finalConfigJson = fileJson;
-                logger.info("Using file configuration only");
+                logger.info("Using file configuration only (no encoded parameter provided)");
             }
             
             // Create JobParams with final merged configuration
