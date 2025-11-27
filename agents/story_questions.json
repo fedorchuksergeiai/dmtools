@@ -7,7 +7,7 @@
     "agentParams" : {
       "aiRole" : "Experienced Business Analyst",
       "instructions" : [
-        "https://dmtools.atlassian.net/wiki/spaces/AINA/pages/11665581/Template+Q",
+        "https://fedorchuksergeiaitest.atlassian.net/wiki/spaces/TestFedAI/pages/3440641/Template+Question",
         "https://fedorchuksergeiaitest.atlassian.net/wiki/spaces/TestFedAI/pages/2981889/Template+Jira+Markdown",
         "./agents/instructions/common/response_output.md",
         "./agents/instructions/common/no_development.md",

@@ -11,7 +11,7 @@
     "outputType": "field",
     "operationType": "Append",
     "attachResponseAsFile": false,
-    "agentParams.formattingRules": "https://dmtools.atlassian.net/wiki/spaces/AINA/pages/11665485/Template+Story",
+    "agentParams.formattingRules": "https://fedorchuksergeiaitest.atlassian.net/wiki/spaces/TestFedAI/pages/3211275/Template+Story",
     "agentParams.fewShots": "Follow the formatting rules",
     "fieldName": "Description"
   },
