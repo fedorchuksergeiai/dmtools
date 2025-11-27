@@ -46,6 +46,7 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SENTRY_DSN: ""  # Disable Sentry by setting empty DSN
       
       - name: Test Report
         uses: dorny/test-reporter@v1
