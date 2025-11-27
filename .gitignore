@@ -149,3 +149,10 @@ dmtools-core/cacheTeamsClient
 /dmtools-core/cacheBasicOllamaAI/*
 cache**/
 dmtools-core/cache**/
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
