@@ -284,6 +284,20 @@ public class McpCliHandler {
                 return value;  // Return as string if conversion fails
             }
         }
+        
+        // Handle array parameters - if value contains commas, split into array
+        // Common array parameter names: fields, fieldNames, etc.
+        if (paramName.equals("fields") || paramName.endsWith("Fields") || paramName.endsWith("Array") || paramName.endsWith("List")) {
+            if (value != null && value.contains(",")) {
+                String[] parts = value.split(",");
+                // Trim whitespace from each part
+                for (int i = 0; i < parts.length; i++) {
+                    parts[i] = parts[i].trim();
+                }
+                return parts;
+            }
+        }
+        
         // Add more type conversions as needed
         return value;
     }
